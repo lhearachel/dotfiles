@@ -1,0 +1,14 @@
+import = [
+    "~/.config/alacritty/themes/themes/catppuccin_mocha"
+]
+
+[font]
+size = 14
+
+[window]
+# decorations = "none"
+
+[window.padding]
+x = 7
+y = 0
+

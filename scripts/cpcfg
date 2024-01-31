@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+# ~ copy dotfiles into the repo for staging ~
+
+cp $HOME/.bashrc $DOTFILES/.bashrc
+cp $XDG_CONFIG_HOME/alacritty/alacritty.toml $DOTFILES/alacritty.toml
+cp $HOME/.tmux.conf $DOTFILES/.tmux.conf
