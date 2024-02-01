@@ -171,7 +171,9 @@ alias gb='g branch'
 alias gpush='g stash push'
 alias gpop='g stash pop'
 
+alias gp='g push'
 alias gup='g pull --rebase'
+
 alias grbi='g rebase --interactive'
 alias grba='g rebase --abort'
 alias grbc='g rebase --continue'
