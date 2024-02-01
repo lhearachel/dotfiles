@@ -84,5 +84,13 @@ M.lsp = {
     },
 }
 
+M.markdown = {
+    {
+        '<leader>mp',
+        '<cmd>MarkdownPreview<CR>',
+        desc = 'Preview Markdown',
+    },
+}
+
 return M
 
