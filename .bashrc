@@ -174,6 +174,7 @@ alias grbc='g rebase --continue'
 
 # edit config files
 alias eb='v ~/.bashrc'
+alias ea='v $XDG_CONFIG_HOME/alacritty/alacritty.toml'
 alias ev='cd $XDG_CONFIG_HOME/nvim && v init.lua && cd -'
 alias sb='source ~/.bashrc'
 

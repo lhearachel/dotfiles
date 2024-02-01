@@ -5,6 +5,22 @@ import = [
 [font]
 size = 14
 
+[font.bold]
+family = "CaskaydiaCove NFM"
+style = "Bold"
+
+[font.italic]
+family = "CaskaydiaCove NFM"
+style = "Italic"
+
+[font.bold_italic]
+family = "CaskaydiaCove NFM"
+style = "Bold Italic"
+
+[font.normal]
+family = "CaskaydiaCove NFM"
+style = "Regular"
+
 [window]
 # decorations = "none"
 
