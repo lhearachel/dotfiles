@@ -9,6 +9,7 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
+require('init.keymaps').load_keymaps()
 require('init.settings').load_opts()
 require('lazy').setup({
     spec = {

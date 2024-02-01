@@ -1,5 +1,28 @@
 local M = {}
 
+M.basic = {
+    {
+        '<C-h>',
+        '<C-W>h',
+        desc = 'Focus pane to the left',
+    },
+    {
+        '<C-k>',
+        '<C-W>k',
+        desc = 'Focus pane directly up',
+    },
+    {
+        '<C-j>',
+        '<C-W>j',
+        desc = 'Focus pane directly down',
+    },
+    {
+        '<C-l>',
+        '<C-W>l',
+        desc = 'Focus pane to the right',
+    },
+}
+
 M.neotree = {
     {
         '<leader>e',
@@ -128,7 +151,19 @@ M.bufferline = {
         '<cmd>BufferLineCycleNext<CR>',
         desc = 'Next buffer',
     },
+    {
+        '<leader>x',
+        '<cmd>bd<CR>',
+        desc = 'Close current buffer',
+    },
 }
+
+function M.load_keymaps()
+    for _, km in ipairs(M.basic) do
+        local mode = km.mode or { 'n', 'v', 'o' }
+        vim.keymap.set(mode, km[1], km[2], { desc = km.desc })
+    end
+end
 
 return M
 
