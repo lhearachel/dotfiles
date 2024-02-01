@@ -24,7 +24,6 @@ M.opt_o = {
 	timeout = true,
 	timeoutlen = 500,
 
-	signcolumn = yes,
 	number = true,
 	relativenumber = false,
 }

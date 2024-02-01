@@ -92,5 +92,43 @@ M.markdown = {
     },
 }
 
+M.bufferline = {
+    {
+        '<leader>bp',
+        '<cmd>BufferLineTogglePin<CR>',
+        desc = 'Toggle pin',
+    },
+    {
+        '<leader>bP',
+        '<cmd>BufferLineGroupClose ungrouped<CR>',
+        desc = 'Close non-pinned buffers',
+    },
+    {
+        '<leader>bo',
+        '<cmd>BufferLineCloseOthers<CR>',
+        desc = 'Close other buffers',
+    },
+    {
+        '<leader>br',
+        '<cmd>BufferLineCloseRight<CR>',
+        desc = 'Close buffers to the right',
+    },
+    {
+        '<leader>bl',
+        '<cmd>BufferLineCloseLeft<CR>',
+        desc = 'Close buffers to the left',
+    },
+    {
+        '<S-h>',
+        '<cmd>BufferLineCyclePrev<CR>',
+        desc = 'Previous buffer',
+    },
+    {
+        '<S-l>',
+        '<cmd>BufferLineCycleNext<CR>',
+        desc = 'Next buffer',
+    },
+}
+
 return M
 
