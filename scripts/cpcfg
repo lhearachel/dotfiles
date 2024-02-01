@@ -8,5 +8,4 @@ cp "$HOME/.tmux.conf" "$DOTFILES/.tmux.conf"
 
 # copy nvim config, make sure to delete the lazy-lock.json
 cp -r "$XDG_CONFIG_HOME/nvim" "$DOTFILES"
-rm "$DOTFILES/nvim/*.json"
 

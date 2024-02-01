@@ -11,11 +11,11 @@ shopt -s checkwinsize
 shopt -s globstar
 
 if ! shopt -oq posix; then
-  if [ -f /usr/share/bash-completion/bash_completion ]; then
-    . /usr/share/bash-completion/bash_completion
-  elif [ -f /etc/bash_completion ]; then
-    . /etc/bash_completion
-  fi
+	if [ -f /usr/share/bash-completion/bash_completion ]; then
+		. /usr/share/bash-completion/bash_completion
+	elif [ -f /etc/bash_completion ]; then
+		. /etc/bash_completion
+	fi
 fi
 
 ###############################################################################
@@ -25,6 +25,10 @@ fi
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_STATE_HOME="$HOME/.local/state"
+export XDG_BIN_HOME="$HOME/.local/bin"
+
+export XDGCFG="$XDG_CONFIG_HOME"
+export XDGBIN="$XDG_BIN_HOME"
 
 export BROWSER="firefox"
 . "$HOME/.cargo/env"
@@ -61,7 +65,7 @@ add_path() {
 	done
 }
 
-add_path "$HOME"/.local/bin "$DOTFILES/scripts"
+add_path "$HOME"/.local/bin "$DOTFILES/scripts" "$XDG_BIN_HOME/neovim/bin"
 
 ###############################################################################
 #                            HISTORY CONFIGURATION                            #
@@ -95,13 +99,12 @@ clone() {
 	local path="$userd/$name"
 	[[ -d "$path" ]] && cd "$path" && return # already checked out, bail
 
-
 	# do the clone
 	mkdir -p "$userd"
 	cd "$userd"
 	local cmd="git clone $1 $path"
-	echo $cmd
-	eval $cmd
+	echo "$cmd"
+	eval "$cmd"
 } && export -f clone
 
 ###############################################################################
@@ -139,21 +142,35 @@ alias sapt='sudo apt'
 alias ..='cd ..'
 alias code='cd $CODE'
 alias dot='cd $DOTFILES'
+alias xdgcfg='cd $XDG_CONFIG_HOME'
 
 # core utils
 alias ls='exa'
+alias la='exa -a'
 alias ll='exa -la'
 alias cat='bat'
 alias du='dust'
 
 # git
-alias gst='git status'
-alias gpush='git stash push'
-alias gpop='git stash pop'
-alias gup='git pull --rebase'
-alias grbi='git rebase --interactive'
-alias grba='git rebase --abort'
-alias grbc='git rebase --continue'
+alias ga='g add'
+alias grm='g rm'
+alias gst='g status'
+
+alias gc='g commit'
+alias gc!='g commit --amend'
+alias gcmsg='g commit --message'
+
+alias gco='g checkout'
+alias gcob='g checkout --branch'
+alias gb='g branch'
+
+alias gpush='g stash push'
+alias gpop='g stash pop'
+
+alias gup='g pull --rebase'
+alias grbi='g rebase --interactive'
+alias grba='g rebase --abort'
+alias grbc='g rebase --continue'
 
 # edit config files
 alias eb='v ~/.bashrc'
@@ -174,12 +191,12 @@ alias last='find . -type f -not -path "*/\.*" -exec ls -lrt {} +'
 
 # set variable identifying the chroot you work in (used in the prompt below)
 if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
-    debian_chroot=$(cat /etc/debian_chroot)
+	debian_chroot=$(cat /etc/debian_chroot)
 fi
 
 # set a fancy prompt (non-color, unless we know we "want" color)
 case "$TERM" in
-    xterm-color|*-256color) color_prompt=yes;;
+xterm-color | *-256color) color_prompt=yes ;;
 esac
 
 # uncomment for a colored prompt, if the terminal has the capability; turned
@@ -188,20 +205,19 @@ esac
 #force_color_prompt=yes
 
 if [ -n "$force_color_prompt" ]; then
-    if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
-	# We have color support; assume it's compliant with Ecma-48
-	# (ISO/IEC-6429). (Lack of such support is extremely rare, and such
-	# a case would tend to support setf rather than setaf.)
-	color_prompt=yes
-    else
-	color_prompt=
-    fi
+	if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
+		# We have color support; assume it's compliant with Ecma-48
+		# (ISO/IEC-6429). (Lack of such support is extremely rare, and such
+		# a case would tend to support setf rather than setaf.)
+		color_prompt=yes
+	else
+		color_prompt=
+	fi
 fi
 
 if [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+	PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
 else
-    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
+	PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
 unset color_prompt force_color_prompt
-
