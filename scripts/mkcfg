@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+# ~ synchronize local environment with the repo ~
+
+# ~ bash
+cp "$DOTFILES/.bashrc" "$HOME/.bashrc"
+source ~/.bashrc
+
+# ~ alacritty
+mkdir -p "$XDG_CONFIG_HOME/alacritty"
+cp "$DOTFILES/alacritty.toml" "$XDG_CONFIG_HOME/alacritty/alacritty.toml"
+
+# ~ tmux
+cp "$DOTFILES/.tmux.conf" "$HOME/.tmux.conf"
+
+# ~ nvim
+mkdir -p "$XDG_CONFIG_HOME/nvim"
+cp -r "$DOTFILES"/nvim/* "$XDG_CONFIG_HOME/nvim"
+
