@@ -3,6 +3,14 @@
 # ~ synchronize local environment with the repo ~
 
 # ~ bash
+if [ -z ${DOTFILES+x} ]; then
+	DOTFILES=$(pwd)
+fi
+
+if [ -z ${XDG_CONFIG_HOME+x} ]; then
+	XDG_CONFIG_HOME="$HOME"/.config
+fi
+
 cp "$DOTFILES/.bashrc" "$HOME/.bashrc"
 source ~/.bashrc
 
