@@ -56,7 +56,9 @@ export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quo
 
 # from Arch Wiki; prevents adding directories multiple times
 add_path() {
-	[ "$(id -u)" -ge 1000 ] || return
+    # Mac specifies new user UIDs as starting at 500
+    # Arch and Debian specify them as starting at 1000
+	[ "$(id -u)" -ge 500 ] || return
 
 	for i in "$@"; do
 		# check if directory exists
@@ -65,8 +67,8 @@ add_path() {
 		# check that directory is not already in the path
 		echo "$PATH" | grep -Eq "(^|:)$i(:|$)" && continue
 
-		# all good, append
-		export PATH="${PATH}:$i"
+		# all good, prepend
+		export PATH="$i:${PATH}"
 	done
 }
 
