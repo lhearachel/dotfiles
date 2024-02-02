@@ -43,6 +43,7 @@ export GHREPOS="$CODE/github.com"
 export MYREPOS="$GHREPOS/$GITUSER"
 export DOTFILES="$MYREPOS/dotfiles"
 export SCRIPTS="$DOTFILES/scripts"
+export DEX="$MYREPOS/dex"
 
 export VISUAL=nvim
 export EDITOR=nvim
@@ -69,7 +70,7 @@ add_path() {
 	done
 }
 
-add_path "$HOME"/.local/bin "$DOTFILES/scripts" "$XDG_BIN_HOME/neovim/bin"
+add_path "/usr/lib" "$HOME"/.local/bin "$DOTFILES/scripts" "$XDG_BIN_HOME/neovim/bin"
 
 ###############################################################################
 #                            HISTORY CONFIGURATION                            #
@@ -105,29 +106,21 @@ clone() {
 
 	# do the clone
 	mkdir -p "$userd"
-	cd "$userd"
 	local cmd="git clone $1 $path"
 	echo "$cmd"
 	eval "$cmd"
+    cd "$path"
 } && export -f clone
 
 ###############################################################################
 #                              SSH CONFIGURATION                              #
 ###############################################################################
 
-if ! pgrep -u "$USER" ssh-agent >/dev/null; then
-	ssh-agent >"$XDG_RUNTIME_DIR/ssh-agent.env"
+if ! ps -p $SSH_AGENT_PID &>/dev/null; then
+    eval `ssh-agent -s` &>/dev/null
 fi
 
-if [[ ! "$SSH_AUTH_SOCK" ]]; then
-	source "$XDG_RUNTIME_DIR/ssh-agent.env" >/dev/null
-fi
-
-if [[ $(grep -E "^(ID|NAME)=" /etc/os-release | grep -q "ubuntu")$? == 0 ]]; then
-	eval "$(ssh-agent -s)" >/dev/null
-fi
-
-ssh-add -q ~/.ssh/id_ed25519
+ssh-add -q ~/.ssh/id_ed25519 &>/dev/null
 
 ###############################################################################
 #                                   ALIASES                                   #
@@ -137,6 +130,7 @@ alias v=nvim
 alias g=git
 alias t=tmux
 alias x=exit
+alias spot=ncspot
 alias gr='grep --color=auto'
 alias sk='killall ssh-agent && source ~/.bashrc'
 alias sv=sudoedit
@@ -147,6 +141,7 @@ alias ..='cd ..'
 alias code='cd $CODE'
 alias dot='cd $DOTFILES'
 alias xdgcfg='cd $XDG_CONFIG_HOME'
+alias dex='cd $DEX'
 
 # core utils
 alias ls='exa'
