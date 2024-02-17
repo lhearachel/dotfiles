@@ -42,3 +42,10 @@ mkdir -p "$XDG_CONFIG_HOME/rofi" "$XDG_DATA_HOME/rofi/themes"
 cp "$DOTFILES/rofi/config.rasi" "$XDG_CONFIG_HOME/rofi/config.rasi"
 cp "$DOTFILES/rofi/catppuccin-macchiato.rasi" "$XDG_DATA_HOME/rofi/themes/catppuccin-macchiato.rasi"
 
+# Xinit
+cp "$DOTFILES/.xinitrc" "$HOME/.xinitrc" 
+
+# Qtile
+cp "$DOTFILES/qtile/config.py" "$XDG_CONFIG_HOME/qtile/config.py"
+cp "$DOTFILES/qtile/autostart.sh" "$XDG_CONFIG_HOME/qtile/autostart.sh"
+
