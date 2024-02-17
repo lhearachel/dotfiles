@@ -11,12 +11,17 @@ if [ -z ${XDG_CONFIG_HOME+x} ]; then
 	XDG_CONFIG_HOME="$HOME"/.config
 fi
 
+if [ -z ${XDG_DATA_HOME+x} ]; then
+	XDG_DATA_HOME="$HOME"/.local/share
+fi
+
 cp "$DOTFILES/.bashrc" "$HOME/.bashrc"
 source ~/.bashrc
 
 # ~ alacritty
 mkdir -p "$XDG_CONFIG_HOME/alacritty"
-cp "$DOTFILES/alacritty.toml" "$XDG_CONFIG_HOME/alacritty/alacritty.toml"
+cp "$DOTFILES/alacritty/alacritty.toml" "$XDG_CONFIG_HOME/alacritty/alacritty.toml"
+cp "$DOTFILES/alacritty/catppuccin-mocha.toml" "$XDG_CONFIG_HOME/alacritty/catppuccin-mocha.toml"
 
 # ~ tmux
 cp "$DOTFILES/.tmux.conf" "$HOME/.tmux.conf"
@@ -24,4 +29,16 @@ cp "$DOTFILES/.tmux.conf" "$HOME/.tmux.conf"
 # ~ nvim
 mkdir -p "$XDG_CONFIG_HOME/nvim"
 cp -r "$DOTFILES"/nvim/* "$XDG_CONFIG_HOME/nvim"
+
+# ~ starship
+cp "$DOTFILES/starship.toml" "$XDG_CONFIG_HOME/starship.toml"
+
+# ~ picom
+mkdir -p "$XDG_CONFIG_HOME/picom"
+cp "$DOTFILES/picom.conf" "$XDG_CONFIG_HOME/picom/picom.conf"
+
+# ~ rofi
+mkdir -p "$XDG_CONFIG_HOME/rofi" "$XDG_DATA_HOME/rofi/themes"
+cp "$DOTFILES/rofi/config.rasi" "$XDG_CONFIG_HOME/rofi/config.rasi"
+cp "$DOTFILES/rofi/catppuccin-macchiato.rasi" "$XDG_DATA_HOME/rofi/themes/catppuccin-macchiato.rasi"
 

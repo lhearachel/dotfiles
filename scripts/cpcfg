@@ -2,10 +2,22 @@
 
 # ~ copy dotfiles into the repo for staging ~
 
+# Standalones
+cp "$HOME/.tmux.conf" "$DOTFILES/.tmux.conf"
+cp "$XDG_CONFIG_HOME/starship.toml" "$DOTFILES/starship.toml"
+cp "$XDG_CONFIG_HOME/picom/picom.conf" "$DOTFILES/picom.conf"
+
+# Bash
 cp "$HOME/.bashrc" "$DOTFILES/.bashrc"
 cp "$HOME/.bash_profile" "$DOTFILES/.bash_profile"
-cp "$XDG_CONFIG_HOME/alacritty/alacritty.toml" "$DOTFILES/alacritty.toml"
-cp "$HOME/.tmux.conf" "$DOTFILES/.tmux.conf"
+
+# Rofi
+cp "$XDG_CONFIG_HOME/rofi/config.rasi" "$DOTFILES/rofi/config.rasi"
+cp "$XDG_DATA_HOME/rofi/themes/catppuccin-macchiato.rasi" "$DOTFILES/rofi/catppuccin-macchiato.rasi"
+
+# Alacritty
+cp "$XDG_CONFIG_HOME/alacritty/catppuccin-mocha.toml" "$DOTFILES/alacritty/catppuccin-mocha.toml"
+cp "$XDG_CONFIG_HOME/alacritty/alacritty.toml" "$DOTFILES/alacritty/alacritty.toml"
 
 # copy nvim config, make sure to delete the lazy-lock.json
 cp -r "$XDG_CONFIG_HOME/nvim" "$DOTFILES"
