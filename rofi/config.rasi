@@ -1,0 +1,19 @@
+configuration {
+    modi: "window,run,drun";
+
+    show-icons: true;
+    icon-theme: "Papirus";
+
+    terminal: "alacritty";
+
+    location: 0;
+    disable-history: false;
+    hide-scrollbar: true;
+
+    drun-display-format: "{icon} {name}";
+    display-drun: "Applications:";
+    display-window: "Windows:";
+}
+
+@theme "catppuccin-macchiato"
+
