@@ -81,7 +81,8 @@ TOP_WIDGETS = [
     widget.CPU(
         background=CATPPUCCIN['yellow'],
         foreground=CATPPUCCIN['base'],
-        format=' {freq_current}GHz @ {load_percent:3.0f}%'
+        format=' {freq_current}GHz @ {load_percent:3.0f}%',
+        padding=10,
     ),
 
     left_arrow(CATPPUCCIN['yellow'], CATPPUCCIN['green']),
@@ -90,6 +91,7 @@ TOP_WIDGETS = [
         foreground=CATPPUCCIN['base'],
         measure_mem='G',
         format=' {MemUsed:2.2f}{mm} / {MemTotal:2.2f}{mm}',
+        padding=10,
     ),
 
     left_arrow(CATPPUCCIN['green'], CATPPUCCIN['sapphire']),
