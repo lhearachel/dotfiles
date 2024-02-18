@@ -11,7 +11,7 @@ from groups import GROUPS
 MOD = 'mod4'
 TERMINAL = 'alacritty'
 BROWSER = 'firefox'
-LAUNCHER = 'rofi -show drun'
+LAUNCHER = 'rofi -show combi -combi-modes "window,drun" -modes combi'
 
 _group_keys = list(chain.from_iterable(
     (
