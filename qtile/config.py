@@ -6,7 +6,6 @@ import os
 import subprocess
 
 from libqtile import layout, hook
-from libqtile.config import Match
 
 from colors import CATPPUCCIN
 from groups import GROUPS
@@ -23,8 +22,8 @@ def autostart():
     with subprocess.Popen([autostart_sh]) as _:
         pass
 
-groups = GROUPS
-keys = KEYS
+widget_defaults = WIDGET_DEFAULTS
+extension_defaults = widget_defaults.copy()
 
 layout_theme = {
     'border_width': 2,
@@ -39,44 +38,19 @@ layouts = [
     layout.TreeTab(**layout_theme),
 ]
 
-widget_defaults = WIDGET_DEFAULTS
-extension_defaults = widget_defaults.copy()
-
+groups = GROUPS
+keys = KEYS
 screens = SCREENS
-
-# Drag floating layouts.
 mouse = MOUSE
 
-dgroups_key_binder = None
-dgroups_app_rules = []  # type: list
-follow_mouse_focus = True
-bring_front_click = False
+# pylint: disable=locally-disabled, invalid-name
+follow_mouse_focus = False
+bring_front_click = 'floating_only'
 floats_kept_above = True
-cursor_warp = False
-floating_layout = layout.Floating(
-    float_rules=[
-        # Run the utility of `xprop` to see the wm class and name of an X client.
-        *layout.Floating.default_float_rules,
-        Match(wm_class="confirmreset"),  # gitk
-        Match(wm_class="makebranch"),  # gitk
-        Match(wm_class="maketag"),  # gitk
-        Match(wm_class="ssh-askpass"),  # ssh-askpass
-        Match(title="branchdialog"),  # gitk
-        Match(title="pinentry"),  # GPG key password entry
-    ]
-)
-auto_fullscreen = True
-focus_on_window_activation = "smart"
+focus_on_window_activation = 'smart'
 reconfigure_screens = True
 
-# If things like steam games want to auto-minimize themselves when losing
-# focus, should we respect this or not?
-auto_minimize = True
-
-# When using the Wayland backend, this can be used to configure input devices.
-wl_input_rules = None
-
-# XXX: Gasp! We're lying here. In fact, nobody really uses or cares about this
+# Gasp! We're lying here. In fact, nobody really uses or cares about this
 # string besides java UI toolkits; you can see several discussions on the
 # mailing lists, GitHub issues, and other WM documentation that suggest setting
 # this string if your java app doesn't work correctly. We may as well just lie
