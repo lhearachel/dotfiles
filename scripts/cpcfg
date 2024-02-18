@@ -24,6 +24,11 @@ cp "$HOME/.xinitrc" "$DOTFILES/.xinitrc"
 
 # Qtile
 cp "$XDG_CONFIG_HOME/qtile/config.py" "$DOTFILES/qtile/config.py"
+cp "$XDG_CONFIG_HOME/qtile/colors.py" "$DOTFILES/qtile/colors.py"
+cp "$XDG_CONFIG_HOME/qtile/groups.py" "$DOTFILES/qtile/groups.py"
+cp "$XDG_CONFIG_HOME/qtile/keys.py" "$DOTFILES/qtile/keys.py"
+cp "$XDG_CONFIG_HOME/qtile/screens.py" "$DOTFILES/qtile/screens.py"
+cp "$XDG_CONFIG_HOME/qtile/widgets.py" "$DOTFILES/qtile/widgets.py"
 cp "$XDG_CONFIG_HOME/qtile/autostart.sh" "$DOTFILES/qtile/autostart.sh"
 
 # copy nvim config, make sure to delete the lazy-lock.json

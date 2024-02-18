@@ -47,5 +47,10 @@ cp "$DOTFILES/.xinitrc" "$HOME/.xinitrc"
 
 # Qtile
 cp "$DOTFILES/qtile/config.py" "$XDG_CONFIG_HOME/qtile/config.py"
+cp "$DOTFILES/qtile/colors.py" "$XDG_CONFIG_HOME/qtile/colors.py"
+cp "$DOTFILES/qtile/groups.py" "$XDG_CONFIG_HOME/qtile/groups.py"
+cp "$DOTFILES/qtile/keys.py" "$XDG_CONFIG_HOME/qtile/keys.py"
+cp "$DOTFILES/qtile/screens.py" "$XDG_CONFIG_HOME/qtile/screens.py"
+cp "$DOTFILES/qtile/widgets.py" "$XDG_CONFIG_HOME/qtile/widgets.py"
 cp "$DOTFILES/qtile/autostart.sh" "$XDG_CONFIG_HOME/qtile/autostart.sh"
 
