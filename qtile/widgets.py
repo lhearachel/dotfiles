@@ -106,6 +106,7 @@ TOP_WIDGETS = [
         background=CATPPUCCIN['lavender'],
         foreground=CATPPUCCIN['base'],
         format='%a  %Y-%m-%d  %H:%M',
+        padding=10,
     ),
 
     left_arrow(CATPPUCCIN['lavender'], CATPPUCCIN['base']),
