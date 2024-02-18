@@ -96,7 +96,7 @@ TOP_WIDGETS = [
     widget.Net(
         background=CATPPUCCIN['sapphire'],
         foreground=CATPPUCCIN['base'],
-        format=' {down:3.0f}{down_suffix:<1}  {up:3.0f}{up_suffix:<1}',
+        format=' {down:3.0f} {down_suffix: <2}  {up:3.0f} {up_suffix: <2}',
     ),
 
     left_arrow(CATPPUCCIN['sapphire'], CATPPUCCIN['lavender']),
