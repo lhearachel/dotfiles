@@ -1,0 +1,84 @@
+[
+    // DP-1
+    {
+        // General Settings
+        "layer": "top",
+        "height": 30,
+        "margin-top": 0,
+        "margin-bottom": 0,
+        "margin-left": 0,
+        "margin-right": 0,
+        "spacing": 0,
+
+        "output": "DP-1",
+
+        "include": [
+            "~/.config/waybar/modules.json"
+        ],
+
+        // Left-Hand Modules
+        "modules-left": [
+            "custom/launcher",
+            "hyprland/workspaces",
+        ],
+
+        // Center Modules
+        "modules-center": [
+            "hyprland/window",
+        ],
+
+        // Right-Hand Modules
+        "modules-right": [
+            //"group/hardware",
+            "wireplumber",
+            "clock",
+            "custom/power",
+        ],
+
+        "group/hardware": {
+            "orientation": "horizontal",
+            "modules": [
+                "cpu",
+                "memory",
+                "disk",
+                "disk#home"
+            ]
+        }
+    },
+
+    // DP-2
+    {
+        // General Settings
+        "layer": "top",
+        "height": 30,
+        "margin-top": 0,
+        "margin-bottom": 0,
+        "margin-left": 0,
+        "margin-right": 0,
+        "spacing": 0,
+
+        "output": "DP-2",
+
+        "include": [
+            "~/.config/waybar/modules.json"
+        ],
+
+        // Left-Hand Modules
+        "modules-left": [
+            "custom/launcher",
+            "hyprland/workspaces"
+        ],
+
+        // Center Modules
+        "modules-center": [
+            "hyprland/window",
+        ],
+
+        // Right-Hand Modules
+        "modules-right": [
+            "wireplumber",
+            "clock",
+            "custom/power"
+        ],
+    }
+]
