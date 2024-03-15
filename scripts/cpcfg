@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 cp "$HOME/.bashrc" "$DOTFILES/bash/.bashrc"
+cp "$HOME/.bash_profile" "$DOTFILES/bash/.bash_profile"
 cp "$XDG_CONFIG_HOME/starship.toml" "$DOTFILES/starship/starship.toml"
 
 cp -r "$HOME/themes" "$DOTFILES"

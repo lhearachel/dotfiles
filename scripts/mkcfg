@@ -10,6 +10,7 @@ if [ -z ${XDG_CONFIG_HOME+} ]; then
 fi
 
 cp "$DOTFILES/bash/.bashrc" "$HOME/.bashrc"
+cp "$DOTFILES/bash/.bash_profile" "$HOME/.bash_profile"
 cp "$DOTFILES/starship/starship.toml" "$XDG_CONFIG_HOME/starship.toml"
 
 cp -r "$DOTFILES/themes" "$HOME"
