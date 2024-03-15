@@ -9,6 +9,22 @@ TERM = "xterm-256color"
 [font]
 size = 13
 
+[font.bold]
+family = "CaskaydiaMono NFM"
+style = "Bold"
+
+[font.bold_italic]
+family = "CaskaydiaMono NFM"
+style = "Bold Italic"
+
+[font.italic]
+family = "CaskaydiaMono NFM"
+style = "Italic"
+
+[font.normal]
+family = "CaskaydiaMono NFM"
+style = "Regular"
+
 [window]
 opacity = 0.9
 dynamic_title = true
