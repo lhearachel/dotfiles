@@ -17,11 +17,11 @@ set -o vi
 bind -x '"\C-l":clear'
 
 if ! shopt -oq posix; then
-	if [ -f /usr/share/bash-completion/bash_completion ]; then
-		. /usr/share/bash-completion/bash_completion
-	elif [ -f /etc/bash_completion ]; then
-		. /etc/bash_completion
-	fi
+    if [ -f /usr/share/bash-completion/bash_completion ]; then
+        . /usr/share/bash-completion/bash_completion
+    elif [ -f /etc/bash_completion ]; then
+        . /etc/bash_completion
+    fi
 fi
 
 complete -c man which
@@ -61,18 +61,18 @@ export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quo
 add_path() {
     # Mac specifies new user UIDs as starting at 500
     # Arch and Debian specify them as starting at 1000
-	[ "$(id -u)" -ge 500 ] || return
+    [ "$(id -u)" -ge 500 ] || return
 
-	for i in "$@"; do
-		# check if directory exists
-		[ -d "$i" ] || continue
+    for i in "$@"; do
+        # check if directory exists
+        [ -d "$i" ] || continue
 
-		# check that directory is not already in the path
-		echo "$PATH" | grep -Eq "(^|:)$i(:|$)" && continue
+        # check that directory is not already in the path
+        echo "$PATH" | grep -Eq "(^|:)$i(:|$)" && continue
 
-		# all good, prepend
-		export PATH="$i:${PATH}"
-	done
+        # all good, prepend
+        export PATH="$i:${PATH}"
+    done
 }
 
 add_path "/usr/lib" "$HOME"/.local/bin "$DOTFILES/scripts" "$XDG_BIN_HOME/neovim/bin"
@@ -91,29 +91,28 @@ export HISTCONTROL="ignorespace:erasedups"
 ###############################################################################
 
 clone() {
-	# extract repo user+name
-	local repo="$1" user
-	local repo="${repo#https://github.com/}"
-	local repo="${repo#git@github.com:}"
-	if [[ $repo =~ / ]]; then
-		user="${repo%%/*}"
-	else
-		user="$GITUSER"
-		[[ -z "$user" ]] && user="$USER"
-	fi
+    # extract repo user+name
+    local repo="$1" user
+    local repo="${repo#https://github.com/}"
+    local repo="${repo#git@github.com:}"
+    if [[ $repo =~ / ]]; then
+        user="${repo%%/*}"
+    else
+        user="$GITUSER"
+        [[ -z "$user" ]] && user="$USER"
+    fi
 
-	# determine where to clone the repo
-	local name="${repo##*/}"
-	local name="${name%*.git}"
-	local userd="$GHREPOS/$user"
-	local path="$userd/$name"
-	[[ -d "$path" ]] && cd "$path" && return # already checked out, bail
+    # determine where to clone the repo
+    local name="${repo##*/}"
+    local name="${name%*.git}"
+    local userd="$GHREPOS/$user"
+    local path="$userd/$name"
+    [[ -d "$path" ]] && cd "$path" && return # already checked out, bail
 
-	# do the clone
-	mkdir -p "$userd"
-	local cmd="git clone $1 $path"
-	echo "$cmd"
-	eval "$cmd"
+    # do the clone
+    mkdir -p "$userd"
+    local cmd="git clone $1 $path"
+    eval "$cmd"
     cd "$path"
 } && export -f clone
 
