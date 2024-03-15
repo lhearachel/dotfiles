@@ -12,7 +12,8 @@ $character
 
 [c]
 detect_files = ['Makefile']
-format = '[$symbol($name(-$version)) ]($style)'
+format = '[$symbol($name(-$version))  ]($style)'
+style = 'bg:base fg:green bold'
 symbol = 'C '
 
 [character]
