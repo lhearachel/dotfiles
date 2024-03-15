@@ -26,6 +26,7 @@ family = "CaskaydiaMono NFM"
 style = "Regular"
 
 [window]
+decorations = 'buttonless'
 opacity = 0.9
 dynamic_title = true
 
