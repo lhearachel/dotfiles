@@ -48,7 +48,6 @@ style = 'bg:crust bold'
 
 [os.symbols]
 Arch = ' 🐧 '
-Macos = ' 🍎 '
 
 [python]
 format = '[${symbol}${pyenv_prefix}(${version})  ]($style)'

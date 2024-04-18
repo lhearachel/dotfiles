@@ -4,14 +4,14 @@ return {
     opts = {
       ensure_installed = {
         "bash-language-server",
-        "clangd",
         "csharp-language-server",
         "dockerfile-language-server",
-        "jedi-language-server",
         "json-lsp",
         "marksman",
+        "pylama",
+        "pyright",
         "rust-analyzer",
-        "swift-mesonlsp",
+        "mesonlsp",
         "taplo",
         "yaml-language-server",
       },

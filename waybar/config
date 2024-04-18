@@ -1,5 +1,5 @@
 [
-    // DP-1
+    // DP-2
     {
         // General Settings
         "layer": "top",
@@ -46,7 +46,7 @@
         }
     },
 
-    // DP-2
+    // DP-3
     {
         // General Settings
         "layer": "top",
@@ -57,7 +57,7 @@
         "margin-right": 0,
         "spacing": 0,
 
-        "output": "DP-2",
+        "output": "DP-3",
 
         "include": [
             "~/.config/waybar/modules.json"
