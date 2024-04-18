@@ -53,6 +53,10 @@ export DEX="$MYREPOS/dex"
 
 export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
+if [ uname -a "Linux" ]; then
+    export MOZ_ENABLE_WAYLAND=1
+fi
+
 ###############################################################################
 #                             PATH CONFIGURATION                              #
 ###############################################################################
@@ -132,7 +136,7 @@ ssh-add -q ~/.ssh/id_ed25519 &>/dev/null
 
 # Search through history with Up/Down arrow keys
 bind '"\e[A": history-search-backward'
-bind '"\e[B": history-search-backward'
+bind '"\e[B": history-search-forward'
 
 run-help() {
     help "$READLINE_LINE" 2>/dev/null || man "$READLINE_LINE";
@@ -159,9 +163,12 @@ alias spac='sudo pacman'
 
 # cd
 alias code='cd $CODE'
+alias mycode='cd $MYREPOS'
 alias dot='cd $DOTFILES'
 alias xdgcfg='cd $XDG_CONFIG_HOME'
 alias dex='cd $DEX'
+alias pokeplat='cd $MYREPOS/pokeplatinum'
+alias pokehg='cd $MYREPOS/pokeheartgold'
 
 # core utils
 alias ls='exa'
@@ -174,13 +181,14 @@ alias du='dust'
 alias ga='g add'
 alias grm='g rm'
 alias gst='g status'
+alias glg='g log --stat'
 
 alias gc='g commit'
 alias gc!='g commit --amend'
 alias gcmsg='g commit --message'
 
 alias gco='g checkout'
-alias gcob='g checkout --branch'
+alias gcob='g checkout -b'
 alias gb='g branch'
 
 alias gpush='g stash push'
@@ -202,5 +210,6 @@ alias eq='v $XDG_CONFIG_HOME/qtile/config.py'
 alias eh='v $XDG_CONFIG_HOME/hypr/hyprland.conf'
 alias ep='v $XDG_CONFIG_HOME/starship.toml'
 
+eval "$(pyenv init -)"
 eval "$(starship init bash)"
 
