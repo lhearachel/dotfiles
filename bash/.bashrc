@@ -171,9 +171,9 @@ alias pokeplat='cd $MYREPOS/pokeplatinum'
 alias pokehg='cd $MYREPOS/pokeheartgold'
 
 # core utils
-alias ls='exa'
-alias la='exa -a'
-alias ll='exa -la'
+alias ls='eza'
+alias la='eza -a'
+alias ll='eza -la'
 alias cat='bat'
 alias du='dust'
 
