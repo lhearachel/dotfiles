@@ -11,6 +11,7 @@ fi
 
 cp "$DOTFILES/bash/.bashrc" "$HOME/.bashrc"
 cp "$DOTFILES/bash/.bash_profile" "$HOME/.bash_profile"
+cp "$DOTFILES/git/.gitconfig" "$HOME/.gitconfig"
 cp "$DOTFILES/starship/starship.toml" "$XDG_CONFIG_HOME/starship.toml"
 
 cp -r "$DOTFILES/themes" "$HOME"
