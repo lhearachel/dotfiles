@@ -16,7 +16,7 @@ cp "$DOTFILES/starship/starship.toml" "$XDG_CONFIG_HOME/starship.toml"
 
 cp -r "$DOTFILES/themes" "$HOME"
 
-declare -a XDG_CONFIG_DIRS=("alacritty" "fontconfig" "hypr" "kitty" "nvim" "rofi" "swaylock" "waybar" "wlogout")
+declare -a XDG_CONFIG_DIRS=("alacritty" "fontconfig" "hypr" "kitty" "nvim" "rofi" "swaylock" "tmux" "waybar" "wlogout")
 
 for DIR in "${XDG_CONFIG_DIRS[@]}"; do
     cp -r "$DOTFILES/$DIR" "$XDG_CONFIG_HOME"
