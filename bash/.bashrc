@@ -153,6 +153,7 @@ bind -m emacs -x '"\eh": run-help'
 alias v=nvim
 alias g=git
 alias t=tmux
+alias s=tmux-session
 alias x=exit
 alias spot=ncspot
 alias gr='grep --color=auto'
