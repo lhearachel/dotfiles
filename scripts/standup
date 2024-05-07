@@ -1,0 +1,14 @@
+#!/usr/bin/bash
+
+DONE_SUB="> :checkbox-checked:"
+PROG_SUB="> :checkbox-deferred:"
+WAIT_SUB="> :checkbox-unchecked:"
+INFO_SUB="> :information_source:"
+
+if [ $# -ne 1 ]; then
+    file=$(find $DEX/journal -name '*.md' | fzf)
+else
+    file=$1
+fi
+
+markdown-extract "Summary" $file | tail -n +3 | head -n -1 | sed -e "s/✅/$DONE_SUB/g" | sed -e "s/🚧/$PROG_SUB/g" | sed -e "s/❌/$WAIT_SUB/g" | sed -e "s/ℹ️/$INFO_SUB/g" | sed -e "s/^$/> /g"
