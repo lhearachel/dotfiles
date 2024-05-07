@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/usr/bin/env bash
 
 DONE_SUB="> :checkbox-checked:"
 PROG_SUB="> :checkbox-deferred:"
@@ -11,4 +11,14 @@ else
     file=$1
 fi
 
-markdown-extract "Summary" $file | tail -n +3 | head -n -1 | sed -e "s/✅/$DONE_SUB/g" | sed -e "s/🚧/$PROG_SUB/g" | sed -e "s/❌/$WAIT_SUB/g" | sed -e "s/ℹ️/$INFO_SUB/g" | sed -e "s/^$/> /g"
+if [[ "$(uname -s)" == "Darwin" ]]; then
+    TAIL=gtail
+    HEAD=ghead
+    SED=gsed
+else
+    TAIL=tail
+    HEAD=head
+    SED=sed
+fi
+
+markdown-extract "Summary" $file | $TAIL -n +3 | $HEAD -n -1 | $SED -e "s/✅/$DONE_SUB/g" | $SED -e "s/🚧/$PROG_SUB/g" | $SED -e "s/❌/$WAIT_SUB/g" | $SED -e "s/ℹ️/$INFO_SUB/g" | $SED -e "s/^$/> /g"
