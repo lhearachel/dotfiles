@@ -5,8 +5,11 @@ PROG_SUB="> :checkbox-deferred:"
 WAIT_SUB="> :checkbox-unchecked:"
 INFO_SUB="> :information_source:"
 
+pushd $DEX > /dev/null
+git pull
+
 if [ $# -ne 1 ]; then
-    file=$(find $DEX/journal -name '*.md' | fzf)
+    file=$(find journal -name '*.md' | sort -r | fzf)
 else
     file=$1
 fi
@@ -21,4 +24,5 @@ else
     SED=sed
 fi
 
-markdown-extract "Summary" $file | $TAIL -n +3 | $HEAD -n -1 | $SED -e "s/✅/$DONE_SUB/g" | $SED -e "s/🚧/$PROG_SUB/g" | $SED -e "s/❌/$WAIT_SUB/g" | $SED -e "s/ℹ️/$INFO_SUB/g" | $SED -e "s/^$/> /g"
+markdown-extract "Summary" $file | $TAIL -n +3 | $HEAD -n -1 | $SED -e "s/✅/$DONE_SUB/g" | $SED -e "s/🚧/$PROG_SUB/g" | $SED -e "s/❌/$WAIT_SUB/g" | $SED -e "s/ℹ/$INFO_SUB/g" | $SED -e "s/^$/> /g"
+popd > /dev/null
