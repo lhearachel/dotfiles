@@ -25,6 +25,10 @@ return {
       show_tags_theme = 'dropdown',
 
       media_previewer = 'viu-previewer',
+
+      take_over_my_home = false,
+      auto_set_filtype = false,
+      auto_set_syntax = false,
     },
 
     keys = {
@@ -38,17 +42,13 @@ return {
       { "<leader>ty", "<cmd>Telekasten yank_notelink<CR>", desc = "Yank link to current note" },
       { "<leader>tm", "<cmd>Telekasten insert_img_link<CR>", desc = "Insert media file" },
       { "<leader>tr", "<cmd>Telekasten rename_note<CR>", desc = "Rename current note" },
-
-      { "[[", mode = { "i" }, "<cmd>Telekasten insert_link<CR>" },
     },
   },
   {
     "folke/which-key.nvim",
     opts = {
-      defaults = {
-        ["<leader>"] = {
-          t = { name = "+notes" },
-        },
+      spec = {
+        { "<leader>t", group = "notes", icon = "󰠮" },
       },
     },
   },

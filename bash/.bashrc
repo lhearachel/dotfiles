@@ -57,6 +57,10 @@ if [ uname -a "Linux" ]; then
     export MOZ_ENABLE_WAYLAND=1
 fi
 
+export DEVKITPRO=/opt/devkitpro/
+export DEVKITARM="$DEVKITPRO/devkitARM"
+export DEVKITPPC="$DEVKITPRO/devkitPPC"
+
 ###############################################################################
 #                             PATH CONFIGURATION                              #
 ###############################################################################
@@ -79,7 +83,7 @@ add_path() {
     done
 }
 
-add_path "/usr/lib" "$HOME"/.local/bin "$DOTFILES/scripts" "$XDG_BIN_HOME/neovim/bin"
+add_path "/usr/lib" "$HOME"/.local/bin "$DOTFILES/scripts" "$XDG_BIN_HOME/neovim/bin" "$HOME/.cargo/bin"
 
 ###############################################################################
 #                            HISTORY CONFIGURATION                            #
@@ -153,8 +157,8 @@ bind -m emacs -x '"\eh": run-help'
 alias v=nvim
 alias g=git
 alias t=tmux
-alias s=tmux-session
 alias x=exit
+alias s=tmux-session
 alias spot=ncspot
 alias gr='grep --color=auto'
 alias sk='killall ssh-agent && source ~/.bashrc'
@@ -213,4 +217,4 @@ alias ep='v $XDG_CONFIG_HOME/starship.toml'
 
 eval "$(pyenv init -)"
 eval "$(starship init bash)"
-
+eval "$(zoxide init bash)"
