@@ -3,17 +3,20 @@ return {
     "williamboman/mason.nvim",
     opts = {
       ensure_installed = {
+        "asm-lsp",
         "bash-language-server",
         "csharp-language-server",
-        "dockerfile-language-server",
-        "json-lsp",
-        "marksman",
-        "pylama",
-        "pyright",
-        "rust-analyzer",
         "mesonlsp",
-        "taplo",
-        "yaml-language-server",
+        "debugpy",
+      },
+    },
+  },
+  {
+    "p00f/clangd_extensions.nvim",
+    opts = {
+      inlay_hints = {
+        inline = true,
+        only_current_line = true,
       },
     },
   },
