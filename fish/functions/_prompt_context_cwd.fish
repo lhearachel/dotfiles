@@ -1,3 +1,3 @@
 function _prompt_context_cwd
-    echo (set_color green)(prompt_pwd)
+    echo (set_color blue)(prompt_pwd)
 end
