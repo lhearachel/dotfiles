@@ -1,3 +1,3 @@
 function sf --description="Source fish configuration"
-    . /fish/config.fish
+    . "$__fish_config_dir/config.fish"
 end
