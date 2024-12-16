@@ -1,0 +1,15 @@
+#!/usr/bin/env fish
+
+set --local year (date +%Y)
+pushd "$DEX/journal/$year" 2&>1 /dev/null
+
+set --local choice (find . -type f | sort -r | fzf)
+sed -n "/### Summary/,\$p" <$choice \
+    | tail -n +5 \
+    | sed "s/^\$/>/g" \
+    | sed "s/✅/> :checkbox-checked:/g" \
+    | sed "s/🚧/> :checkbox-deferred:/g" \
+    | sed "s/❌/> :checkbox-unchecked:/g" \
+    | sed "s/ℹ/> :information-source:/g"
+
+popd - 2&>1 /dev/null
