@@ -35,7 +35,3 @@ if status is-interactive
     fish_config theme choose catppuccin
     pyenv init - | source
 end
-
-function _prompt_skip_line --on-event fish_prompt
-    echo
-end
