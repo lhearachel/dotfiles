@@ -34,5 +34,7 @@ set -gx fish_prompt_pwd_dir_length 0
 
 if status is-interactive
     fish_config theme choose catppuccin
-    pyenv init - | source
+    type -q --no-functions pyenv; and pyenv init - | source
+    type -q --no-functions rbenv; and rbenv init - | source
+    type -q --no-functions jenv; and jenv init - | source
 end
