@@ -16,6 +16,10 @@ set -gx DOTFILES "$HOME/dotfiles"
 set -gx PYENV_ROOT "$HOME/.pyenv"
 set -gx CARGO_ROOT "$HOME/.cargo"
 
+set -gx CODE_REPOS "$HOME/code"
+set -gx GIT_REPOS "$CODE_REPOS/git"
+set -gx DEX "$GIT_REPOS/dex"
+
 fish_add_path "$XDG_BIN_HOME"
 fish_add_path "$DOTFILES/scripts"
 fish_add_path "$PYENV_ROOT/bin"

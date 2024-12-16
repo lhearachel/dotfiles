@@ -1,0 +1,8 @@
+#!/bin/bash
+
+XDG_CONFIG_HOME="$HOME/.config"
+
+ln -s "$HOME/dotfiles/nvim" "$XDG_CONFIG_HOME/nvim"
+ln -s "$HOME/dotfiles/fish" "$XDG_CONFIG_HOME/fish"
+ln -s "$HOME/dotfiles/kitty" "$XDG_CONFIG_HOME/kitty"
+ln -s "$HOME/dotfiles/tmux" "$XDG_CONFIG_HOME/tmux"
