@@ -5,7 +5,9 @@ function _prompt_context_node
         return $ABORT_FEATURE
     end
 
-    if test -e "$PWD/.nvmrc";
+    if test -e "$PWD/package.json";
+        or test -e "$PWD/yarn.lock";
+        or test -e "$PWD/.nvmrc";
         or test -e "$PWD/.node-version"
         set --local node_prefix (set_color brgreen)"󰎙"
         set --local node_version (set_color brblack)(nvm current)
