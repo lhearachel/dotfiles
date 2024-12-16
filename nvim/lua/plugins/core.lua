@@ -6,16 +6,6 @@ return {
     },
   },
   {
-    "saghen/blink.cmp",
-    opts = {
-      completion = {
-        ghost_text = {
-          enabled = false,
-        },
-      },
-    },
-  },
-  {
     "folke/which-key.nvim",
     opts = {
       preset = "classic",
