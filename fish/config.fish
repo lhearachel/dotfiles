@@ -25,8 +25,8 @@ fish_add_path "$DOTFILES/scripts"
 fish_add_path "$PYENV_ROOT/bin"
 fish_add_path "$CARGO_ROOT/bin"
 
-if test (uname -s) = "Darwin"
-    fish_add_path "/opt/homebrew/bin"
+if test (uname -s) = Darwin
+    fish_add_path /opt/homebrew/bin
 end
 
 set -gx fish_prompt_pwd_dir_length 0
@@ -34,4 +34,8 @@ set -gx fish_prompt_pwd_dir_length 0
 if status is-interactive
     fish_config theme choose catppuccin
     pyenv init - | source
+end
+
+function _prompt_skip_line --on-event fish_prompt
+    echo
 end
