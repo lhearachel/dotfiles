@@ -20,6 +20,8 @@ set -gx CODE_REPOS "$HOME/code"
 set -gx GIT_REPOS "$CODE_REPOS/git"
 set -gx DEX "$GIT_REPOS/dex"
 
+set -gx CLIP_COPY wl-copy
+
 fish_add_path "$XDG_BIN_HOME"
 fish_add_path "$DOTFILES/scripts"
 fish_add_path "$PYENV_ROOT/bin"
@@ -28,6 +30,7 @@ fish_add_path "$CARGO_ROOT/bin"
 if test (uname -s) = Darwin
     fish_add_path /opt/homebrew/bin
     set -gx BROWSER "open -a firefox"
+    set -gx CLIP_COPY pbcopy
 end
 
 set -gx fish_prompt_pwd_dir_length 0
