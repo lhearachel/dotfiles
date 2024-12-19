@@ -29,6 +29,7 @@ fish_add_path "$CARGO_ROOT/bin"
 
 if test (uname -s) = Darwin
     fish_add_path /opt/homebrew/bin
+    fish_add_path /opt/homebrew/opt/bison/bin
     set -gx BROWSER "open -a firefox"
     set -gx CLIP_COPY pbcopy
 end
