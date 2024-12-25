@@ -4,7 +4,7 @@ return {
     opts = {
       keymap = {
         preset = "enter",
-        ["<C-y>"] = { "select-and-accept", "fallback" },
+        ["<C-y>"] = { "select_and_accept", "fallback" },
         ["<C-c>"] = { "cancel", "fallback" },
       },
       completion = {
