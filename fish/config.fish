@@ -42,3 +42,7 @@ if status is-interactive
     type -q --no-functions rbenv; and rbenv init - | source
     type -q --no-functions jenv; and jenv init - | source
 end
+
+function _space_prompts --on-event fish_postexec
+    echo
+end
