@@ -8,7 +8,13 @@ function _prompt_context_python
     if test -e "$PWD/.venv";
         or test -e "$PWD/pyproject.toml"
         set --local python_prefix (set_color bryellow)"󰌠"
-        set --local python_version (set_color brblack)(pyenv version | cut -d ' ' -f 1)
+        set --local python_version
+
+        if test -n "$VIRTUAL_ENV"
+            set python_version (set_color brblack)(python --version | cut -d ' ' -f 2)
+        else
+            set python_version (set_color brblack)(pyenv version | cut -d ' ' -f 1)
+        end
 
         echo "$python_prefix $python_version"
     end
