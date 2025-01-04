@@ -6,7 +6,6 @@ set -gx XDG_BIN_HOME "$HOME/.local/bin"
 set -gx BROWSER firefox
 set -gx VISUAL nvim
 set -gx EDITOR nvim
-set -gx PAGER bat
 
 # Use bat as the pager for man
 # https://github.com/sharkdp/bat#man
