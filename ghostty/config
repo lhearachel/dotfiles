@@ -1,0 +1,11 @@
+theme = catppuccin-macchiato
+
+# Fonts
+adjust-cell-height = 20%
+font-family = CaskaydiaMono Nerd Font Mono
+
+# Window padding; `extend` 
+window-padding-color = extend
+window-padding-x = 5
+
+macos-titlebar-style = hidden
