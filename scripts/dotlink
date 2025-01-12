@@ -2,8 +2,23 @@
 
 XDG_CONFIG_HOME="$HOME/.config"
 
-ln -s "$HOME/dotfiles/nvim" "$XDG_CONFIG_HOME/nvim"
-ln -s "$HOME/dotfiles/fish" "$XDG_CONFIG_HOME/fish"
-ln -s "$HOME/dotfiles/kitty" "$XDG_CONFIG_HOME/kitty"
-ln -s "$HOME/dotfiles/tmux" "$XDG_CONFIG_HOME/tmux"
-ln -s "$HOME/dotfiles/ghostty" "$XDG_CONFIG_HOME/ghostty"
+function try_link {
+	if [ -L "$XDG_CONFIG_HOME/$1" ]; then
+		if [ -e "$XDG_CONFIG_HOME/$1" ]; then
+			echo "Config link for $1 is good; skipping..."
+			return 0
+		else
+			echo -n "Config link for $1 is broken; removing... "
+			rm "$XDG_CONFIG_HOME/$1"
+		fi
+	fi
+
+	ln -s "$HOME/dotfiles/$1" "$XDG_CONFIG_HOME/$1"
+	echo "Linked config for $1"
+}
+
+try_link nvim
+try_link fish
+try_link tmux
+try_link ghostty
+try_link git
