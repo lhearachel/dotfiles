@@ -14,3 +14,7 @@ window-decoration = false
 # MacOS specifics
 macos-titlebar-style = hidden
 macos-option-as-alt = true
+
+# Allow reading from and writing to the system clipboard
+clipboard-read = allow
+clipboard-write = allow
