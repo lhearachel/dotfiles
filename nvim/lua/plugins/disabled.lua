@@ -6,10 +6,6 @@ return {
   -- lazyvim.plugins.extras.lang.yaml
   { "b0o/SchemaStore.nvim", enabled = false },
 
-  -- lazyvim.plugins.extras.lang.python
-  { "nvim-neotest/neotest-python", enabled = false },
-  { "mfussenegger/nvim-dap-python", enabled = false },
-
   -- lazyvim.plugins.extras.lang.ruby
   { "olimorris/neotest-rspec", enabled = false },
   { "suketa/nvim-dap-ruby", enabled = false },
