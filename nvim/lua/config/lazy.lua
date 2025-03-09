@@ -45,6 +45,8 @@ require("lazy").setup({
 
     { import = "lazyvim.plugins.extras.ui.treesitter-context" },
 
+    { import = "lazyvim.plugins.extras.util.dot" },
+
     { import = "plugins" },
   },
 
