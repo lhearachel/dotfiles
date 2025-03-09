@@ -1,0 +1,16 @@
+configuration{
+    modi: "drun,emoji,calc";
+    icon-theme: "Oranchelo";
+    show-icons: true;
+    terminal: "kitty";
+    drun-display-format: "{icon} {name}";
+    location: 0;
+    disable-history: false;
+    hide-scrollbar: true;
+    display-drun: "   Run ";
+    display-emoji: " 󰞅  Emoji";
+    display-calc: " 󰪚  Calc";
+    sidebar-mode: true;
+}
+
+@theme "catppuccin-mocha"
