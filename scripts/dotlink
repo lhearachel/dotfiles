@@ -21,6 +21,7 @@ try_link nvim
 try_link fish
 try_link tmux
 try_link ghostty
+try_link kitty
 try_link git
 try_link kitty
 try_link fontconfig
