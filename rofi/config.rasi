@@ -1,4 +1,6 @@
-configuration{
+@theme "~/.config/rofi/catppuccin-default.rasi"
+
+configuration {
     modi: "drun,emoji,calc";
     icon-theme: "Oranchelo";
     show-icons: true;
@@ -12,5 +14,3 @@ configuration{
     display-calc: " 󰪚  Calc";
     sidebar-mode: true;
 }
-
-@theme "catppuccin-mocha"
