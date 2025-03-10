@@ -1,0 +1,18 @@
+{
+    "layer": "top",
+    "margin-bottom": 0,
+    "margin-top": 0,
+    "modules-left": [
+        "custom/launcher"
+    ],
+    "modules-center": [
+        "hyprland/workspaces"
+    ],
+    "modules-right": [
+        "network",
+        "wireplumber",
+        "clock",
+        "battery",
+        "custom/power"
+    ]
+}

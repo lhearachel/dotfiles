@@ -1,0 +1,45 @@
+* {
+    border: none;
+    border-radius: 3px;
+    font-family: "CaskaydiaMono Nerd Font";
+    font-size: 14px;
+    min-height; 1px;
+    padding-top: 0px;
+    border-top: 0px;
+}
+
+window#waybar {
+    background: transparent;
+}
+
+window#waybar.hidden {
+    opacity: 0.2;
+}
+
+#window {
+    border-radius: 3px;
+    border-top: 1px;
+    margin-top: 1px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 1px;
+
+    transition: none;
+    color: transparent;
+    background: transparent;
+}
+
+#workspaces {
+    margin-bottom: 0px;
+    margin-top: 6px;
+    margin-left: 12px;
+    font-size: 2px;
+    border-radius: 10px;
+    background: #161320;
+    transition: none;
+}
+
+#workspaces button {
+    transition: none;
+    color: @text;
+}
