@@ -25,3 +25,8 @@ functions/_nvm_version_deactivate.fish
 functions/nvm.fish
 conf.d/nvm.fish
 completions/nvm.fish
+
+# danhper/fish-ssh-agent
+functions/__ssh_agent_is_started.fish
+functions/__ssh_agent_start.fish
+conf.d/fish-ssh-agent.fish
