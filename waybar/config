@@ -1,0 +1,79 @@
+{
+    "layer": "top",
+    "margin-bottom": 0,
+    "margin-top": 0,
+    "modules-left": [
+        "custom/launcher",
+        "clock"
+    ],
+    "modules-center": [
+        "hyprland/workspaces"
+    ],
+    "modules-right": [
+        "network",
+        "wireplumber",
+        "battery",
+        "custom/power"
+    ],
+    "battery": {
+        "interval": 2,
+        "states": {
+            "good": 95,
+            "warning": 30,
+            "critical": 20
+        },
+        "format": "{icon} {capacity}%",
+        "format-charging": "󱐋 {capacity}%",
+        "format-plugged": " {capacity}%",
+        "format-alt": "{time} {icon}",
+        "format-icons": [
+            "󰁺",
+            "󰁼",
+            "󰁿",
+            "󰂁",
+            "󰁹"
+        ]
+    },
+    "clock": {
+        "timezone": "",
+        "interval": 60,
+        "format": " {:%a %b %d %Y @ %H:%M}",
+        "tooltip-format": "<tt><small>{calendar}</small></tt>",
+        "calendar": {
+            "mode": "year",
+            "mode-mon-col": 3
+        }
+    },
+    "custom/launcher": {
+        "format": "<span size='xx-large'></span>",
+        "on-click": "rofi -show drun"
+    },
+    "custom/power": {
+        "format": "<span size='xx-large'></span>",
+        "on-click": "hyprctl dispatch exit"
+    },
+    "hyprland/workspaces": {
+        "format": "{icon}",
+        "on-scroll-up": "hyprctl dispatch workspace e+1",
+        "on-scroll-down": "hyprctl dispatch workspace e-1",
+        "on-click": "activate"
+    },
+    "network": {
+        "format-wifi": "",
+        "format-ethernet": "",
+        "format-disconnected": "⚠",
+        "format-alt": "{ifname}: {ipaddr}/{cidr}",
+        "tooltip-format": "{essid} ({signalStrength}%)"
+    },
+    "wireplumber": {
+        "format": "{icon} {volume}%",
+        "format-muted": "󰝟",
+        "format-icons": [
+            "",
+            "",
+            ""
+        ],
+        "on-click": "helvum",
+        "tooltip": false
+    }
+}
