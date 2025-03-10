@@ -1,7 +1,7 @@
-@theme "~/.config/rofi/catppuccin-default.rasi"
+@theme "catppuccin-macchiatto"
 
 configuration {
-    modi: "drun,emoji,calc";
+    modi: "drun,emoji,calc,filebrowser";
     icon-theme: "Oranchelo";
     show-icons: true;
     terminal: "kitty";
@@ -12,5 +12,6 @@ configuration {
     display-drun: "   Run ";
     display-emoji: " 󰞅  Emoji";
     display-calc: " 󰪚  Calc";
+    display-filebrowser: " 󰙅 Files";
     sidebar-mode: true;
 }
