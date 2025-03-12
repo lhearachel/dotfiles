@@ -50,7 +50,7 @@
     },
     "custom/power": {
         "format": "<span size='xx-large'></span>",
-        "on-click": "hyprctl dispatch exit"
+        "on-click": "wlogout"
     },
     "hyprland/workspaces": {
         "format": "{icon}",
