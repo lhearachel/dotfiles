@@ -37,7 +37,7 @@
     "clock": {
         "timezone": "",
         "interval": 60,
-        "format": " {:%a %b %d %Y @ %H:%M}",
+        "format": "  {:%a %b %d %Y @ %H:%M}",
         "tooltip-format": "<tt><small>{calendar}</small></tt>",
         "calendar": {
             "mode": "year",
@@ -66,14 +66,14 @@
         "tooltip-format": "{essid} ({signalStrength}%)"
     },
     "wireplumber": {
-        "format": "{icon} {volume}%",
+        "format": "{icon}  {volume}%",
         "format-muted": "󰝟",
         "format-icons": [
             "",
             "",
             ""
         ],
-        "on-click": "helvum",
+        "on-click": "pavucontrol",
         "tooltip": false
     }
 }
