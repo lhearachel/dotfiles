@@ -30,3 +30,6 @@ completions/nvm.fish
 functions/__ssh_agent_is_started.fish
 functions/__ssh_agent_start.fish
 conf.d/fish-ssh-agent.fish
+
+# mise
+completions/mise.fish
