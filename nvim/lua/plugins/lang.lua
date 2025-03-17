@@ -17,6 +17,7 @@ return {
         "ebnf", -- EBNF grammars
         "ini",
         "just", -- casey/just
+        "kdl",
         "ledger",
         "linkerscript",
         "ninja",
