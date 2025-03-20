@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+if [[ $# -ne 2 ]]; then
+	echo "unexpected number of commands"
+	echo "usage: bindiff <theirs> <mine>"
+	exit 1
+fi
+
+cmp -l "$1" "$2" | gawk '{printf "%08X %02X %02X\n", $1-1, strtonum(0$2), strtonum(0$3)}'
