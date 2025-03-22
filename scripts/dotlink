@@ -27,3 +27,4 @@ try_link kitty
 try_link fontconfig
 try_link rofi
 try_link mise
+try_link mako
