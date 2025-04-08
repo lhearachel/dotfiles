@@ -3,7 +3,8 @@
 -- Add any additional options here
 
 vim.g.snacks_animate = false
-vim.g.lazyvim_picker = "fzf"
+vim.g.lazyvim_picker = "auto"
+vim.g.lazyvim_cmp = "auto"
 vim.g.ai_cmp = false
 
 local opt = vim.opt
