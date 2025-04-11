@@ -36,7 +36,6 @@ set -gx fish_prompt_pwd_dir_length 0
 
 if status is-interactive
     fish_config theme choose catppuccin
-    type -q --no-functions pyenv; and pyenv init - fish | source
     type -q --no-functions mise; and mise activate --shims fish | source
 else
     type -q --no-functions mise; and mise activate fish | source

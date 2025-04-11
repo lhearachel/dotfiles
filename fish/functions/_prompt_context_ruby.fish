@@ -7,7 +7,7 @@ function _prompt_context_ruby
 
     if test -e "$PWD/Gemfile"
         set --local ruby_prefix (set_color brred)"󰴭"
-        set --local ruby_version (set_color brblack)(rbenv version | cut -d ' ' -f 1)
+        set --local ruby_version (set_color brblack)"v"(ruby --version | cut -d ' ' -f 2)
 
         echo "$ruby_prefix $ruby_version"
     end

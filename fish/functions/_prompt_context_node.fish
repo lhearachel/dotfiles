@@ -10,7 +10,7 @@ function _prompt_context_node
         or test -e "$PWD/.nvmrc";
         or test -e "$PWD/.node-version"
         set --local node_prefix (set_color brgreen)"󰎙"
-        set --local node_version (set_color brblack)(nvm current)
+        set --local node_version (set_color brblack)(node --version)
 
         echo "$node_prefix $node_version"
     end
