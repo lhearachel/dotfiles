@@ -22,7 +22,6 @@ set -gx DEX "$GIT_REPOS/dex"
 
 fish_add_path "$XDG_BIN_HOME"
 fish_add_path "$DOTFILES/scripts"
-fish_add_path "$PYENV_ROOT/bin"
 fish_add_path "$CARGO_ROOT/bin"
 
 set --local machine_config ~/.config/fish/config_(prompt_hostname).fish

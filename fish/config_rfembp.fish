@@ -13,15 +13,11 @@ set -gx DEX "$MY_GIT_REPOS/dex"
 set -gx CHEF_USER rforshee
 set -gx ST_USER rforshee
 
-if status is-interactive
-    # I typically only use Ruby and Java in a working environment.
-    type -q --no-functions rbenv; and rbenv init - | source
-    type -q --no-functions jenv; and jenv init - | source
-end
-
 senv gitlab_pat
 senv github_pat
 senv vault.infra
 
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '~/google-cloud-sdk/path.fish.inc' ]; . '~/google-cloud-sdk/path.fish.inc'; end
+if [ -f '~/google-cloud-sdk/path.fish.inc' ]
+    . '~/google-cloud-sdk/path.fish.inc'
+end
