@@ -33,3 +33,6 @@ conf.d/fish-ssh-agent.fish
 
 # mise
 completions/mise.fish
+
+# git-extras
+completions/git-extras.fish
