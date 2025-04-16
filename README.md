@@ -35,11 +35,10 @@ from scratch.
 ### Terminal Emulator: `kitty`
 
 I've used countless terminal emulators over the years and have never found
-myself strongly tied to any of them. `kitty` just happens to be the one that I
-currently use.
-
-I am curious about `wezterm`, but have not had time to spin up configuration and
-integrate it into my usual workflow.
+myself strongly tied to any of them. `kitty` is my current choice because I put
+a high valuation on personalizing my working environment by easily-replicable
+configuration. `kitty` has no competition as a terminal emulator in this regard;
+no other offering is as powerful, fast, modular, and seamless to work with.
 
 ### Multiplexer: `tmux`
 
