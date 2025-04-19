@@ -40,10 +40,20 @@ a high valuation on personalizing my working environment by easily-replicable
 configuration. `kitty` has no competition as a terminal emulator in this regard;
 no other offering is as powerful, fast, modular, and seamless to work with.
 
-### Multiplexer: `tmux`
+Historically, I've leaned on `tmux` as a multiplexer. However, recently I've
+been attempting to break this dependency due to some perceived performance
+issues with startup of new terminals. Luckily, `kitty` comes with built-in
+multiplexing features. As such, I've started using `kitty` itself as my
+multiplexer, implementing some `tmux`-like features on top of it with my
+preferred keybinds for splits, layout management, and integration with `nvim`.
 
-It comes on every server, and is functionally ubiquitous in the \*nix world. I
-can't live without it (at least until I eventually spin up `wezterm`).
+### Environment Management: `mise`
+
+Lately, I've been replacing individual tools for managing versioned toolchains
+for Ruby, Python, Node, and Java with `mise` as a single drop-in. I am still
+quite new to `mise` and have yet to fully explore some of its more powerful
+features as a task runner, but the promises are exciting and the interfaces are
+beautiful.
 
 [lazyvim]: https://github.com/LazyVim/LazyVim
 
@@ -52,4 +62,12 @@ can't live without it (at least until I eventually spin up `wezterm`).
 ### Wayland Compositor: `hyprland`
 
 I started using this when I spun up an Arch machine and haven't found a strong
-reason to switch to a different compositor.
+reason to switch to a different compositor. Some additional dotfiles for my
+specific desktop environment are included for:
+
+- `fontconfig` - Default system fonts
+- `mako` - Notification daemon
+- `rofi` - Application launcher
+- `wallpaper` - Just my wallpaper 😁
+- `waybar` - System panels
+- `wlogout` - Logout and shutdown menu
