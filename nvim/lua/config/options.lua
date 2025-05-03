@@ -8,6 +8,9 @@ vim.g.lazyvim_picker = "auto"
 vim.g.lazyvim_cmp = "auto"
 vim.g.ai_cmp = false
 
+vim.g.lazyvim_python_lsp = "basedpyright"
+vim.g.lazyvim_python_ruff = "ruff"
+
 local opt = vim.opt
 opt.shiftwidth = 4
 opt.tabstop = 4
