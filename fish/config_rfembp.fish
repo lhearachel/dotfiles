@@ -18,6 +18,9 @@ senv gitlab_pat
 senv github_pat
 senv vault.infra
 
+# Necessary to set the SDK path for C++ programs for base g++/clang++
+set -gx SDKROOT (xcrun --show-sdk-path)
+
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '~/google-cloud-sdk/path.fish.inc' ]
     . '~/google-cloud-sdk/path.fish.inc'
