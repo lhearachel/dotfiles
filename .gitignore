@@ -1,2 +1,3 @@
 # Work-related scripts that probably should not live in my public repository
 scripts/knife-*
+scripts/vault-*
