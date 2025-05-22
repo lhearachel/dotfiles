@@ -5,7 +5,7 @@ environments. It is built on some opinionated ideals for software and very
 particular choices of tools. Plus, sharing configuration with over developers
 and potentially inspiring them with new ideas sparks joy.
 
-## Core Utilities
+## Core Components
 
 ### Shell: `fish`
 
@@ -55,6 +55,21 @@ quite new to `mise` and have yet to fully explore some of its more powerful
 features as a task runner, but the promises are exciting and the interfaces are
 beautiful.
 
+### Modern Core Utilities
+
+- `bat` - A drop-in replacement for `cat` and `less` with syntax-highlighting
+  and pagination. I also have it configured as the pager for `man` and `git`.
+- `eza` - Replaces `ls`. Includes some additional features such as automatic
+  coloring and icon-assignments, etc.
+- `ripgrep` - Replaces `grep`, and includes some additional features such as
+  automatic file-ignores based on version control. The automatic directory
+  recursion was what convinced me at first, and I've only found more things to
+  like about it.
+- `z` - Replaces `cd`, somewhat. I use this to quickly jump around through
+  commonly-accessed directories using simple keywords. Specifically, I use [this
+  reimplementation][fish-z] of it as a `fish` plugin.
+
+[fish-z]: https://github.com/jethrokuan/z
 [lazyvim]: https://github.com/LazyVim/LazyVim
 
 ## Linux-Specific
