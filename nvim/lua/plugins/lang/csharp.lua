@@ -3,7 +3,7 @@ return {
     "nvim-treesitter/nvim-treesitter",
     opts = {
       ensure_installed = {
-        "c_sharp",
+        -- "c_sharp",
       },
     },
   },
@@ -11,7 +11,7 @@ return {
     "neovim/nvim-lspconfig",
     opts = {
       servers = {
-        csharp_ls = {},
+        -- csharp_ls = {},
       },
     },
   },
