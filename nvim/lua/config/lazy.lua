@@ -36,6 +36,7 @@ require("lazy").setup({
     { import = "lazyvim.plugins.extras.lang.markdown" },
     { import = "lazyvim.plugins.extras.lang.python" },
     { import = "lazyvim.plugins.extras.lang.ruby" },
+    { import = "lazyvim.plugins.extras.lang.rust" },
     { import = "lazyvim.plugins.extras.lang.terraform" },
     { import = "lazyvim.plugins.extras.lang.tex" },
     { import = "lazyvim.plugins.extras.lang.typescript" },
