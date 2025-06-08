@@ -18,12 +18,12 @@ return {
     },
   },
   {
-    "williamboman/mason.nvim",
+    "mason-org/mason.nvim",
     optional = false,
     version = "^1.0.0",
   },
   {
-    "williamboman/mason-lspconfig.nvim",
+    "mason-org/mason-lspconfig.nvim",
     version = "^1.0.0",
   },
   {
