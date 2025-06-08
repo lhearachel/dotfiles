@@ -18,6 +18,8 @@ require("lazy").setup({
   spec = {
     { "LazyVim/LazyVim", import = "lazyvim.plugins" },
 
+    { import = "lazyvim.plugins.extras.ai.copilot" },
+
     { import = "lazyvim.plugins.extras.coding.mini-comment" },
     { import = "lazyvim.plugins.extras.coding.mini-surround" },
     { import = "lazyvim.plugins.extras.coding.neogen" },
