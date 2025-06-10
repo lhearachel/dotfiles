@@ -26,3 +26,6 @@ parser_config.asciidoc_inline = {
         requires_generate_from_grammar = false,
     },
 }
+
+-- @lhearachel: Enable tombi
+vim.lsp.enable('tombi')
