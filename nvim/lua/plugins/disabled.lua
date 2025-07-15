@@ -8,4 +8,7 @@ return {
 
   -- lazyvim.plugins.extras.lang.terraform
   { "ANGkeith/telescope-terraform-doc.nvim", enabled = false },
+
+  -- lazyvim.plugins
+  { "nvim-neo-tree/neo-tree.nvim", enabled = false },
 }
