@@ -7,10 +7,8 @@ set -gx BROWSER firefox
 set -gx VISUAL nvim
 set -gx EDITOR nvim
 
-# Use bat as the pager for man
-# https://github.com/sharkdp/bat#man
-set -gx MANPAGER "sh -c 'col -bx | bat -l man -p'"
-set -gx MANROFFOPT -c
+# Use nvim as the man-pager
+set -gx MANPAGER "nvim +Man!"
 
 set -gx DOTFILES "$HOME/dotfiles"
 set -gx PYENV_ROOT "$HOME/.pyenv"
