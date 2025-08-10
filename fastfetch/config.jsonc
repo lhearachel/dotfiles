@@ -35,11 +35,12 @@
     {
       "type": "cpu",
       "key": "{#separator}│ {#magenta}",
-      "format": "{name} ({cores-physical}-core @ {freq-max})"
+      "format": "{name} ({cores-physical} x {freq-max})"
     },
     {
       "type": "gpu",
-      "key": "{#separator}│ {#magenta}󰢮"
+      "key": "{#separator}│ {#magenta}󰢮",
+      "format": "{vendor} {name}"
     },
     {
       "type": "memory",
