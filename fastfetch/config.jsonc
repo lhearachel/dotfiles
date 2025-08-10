@@ -28,9 +28,9 @@
 
     // Hardware info
     {
-      "type": "host",
+      "type": "title",
       "key": "{#magenta}󰌢",
-      "format": "{#magenta}{$USER}@{$HOSTNAME}{#} ({family})"
+      "format": "{#magenta}{user-name}@{host-name}{#}"
     },
     {
       "type": "cpu",
