@@ -1,0 +1,127 @@
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+  "logo": {
+    "source": "~/.config/fastfetch/logo.txt",
+    "type": "file",
+    "color": {
+      "1": "magenta",
+      "2": "white",
+      "3": "#C6A0F6",
+      "4": "black",
+      "5": "blue"
+    },
+    "padding": {
+      "top": 2,
+      "left": 2,
+      "right": 5
+    }
+  },
+  "display": {
+    "separator": "  ",
+    "showErrors": true
+  },
+  "modules": [
+    {
+      "type": "custom",
+      "format": ""
+    },
+
+    // Hardware info
+    {
+      "type": "host",
+      "key": "{#magenta}󰌢",
+      "format": "{#magenta}{$USER}@{$HOSTNAME}{#} ({family})"
+    },
+    {
+      "type": "cpu",
+      "key": "{#separator}│ {#magenta}",
+      "format": "{name} ({cores-physical}-core @ {freq-max})"
+    },
+    {
+      "type": "gpu",
+      "key": "{#separator}│ {#magenta}󰢮"
+    },
+    {
+      "type": "memory",
+      "key": "{#separator}│ {#magenta}"
+    },
+    {
+      "type": "disk",
+      "key": "{#separator}│ {#magenta}󰋊",
+      "format": "{mountpoint} - {size-used} / {size-total} ({size-percentage})"
+    },
+
+    {
+      "type": "custom",
+      "format": "{#separator}│"
+    },
+
+    // Base software (shell, terminal, editor, font, etc.)
+    {
+      "type": "os",
+      "key": "{#separator}│ {##C6A0F6}󰣇"
+    },
+    {
+      "type": "kernel",
+      "key": "{#separator}│ {##C6A0F6}󰒋"
+    },
+    {
+      "type": "shell",
+      "key": "{#separator}│ {##C6A0F6}$",
+      "format": "{pretty-name} v{version}"
+    },
+    {
+      "type": "terminal",
+      "key": "{#separator}│ {##C6A0F6}󰞷",
+      "format": "{pretty-name} v{version}"
+    },
+    {
+      "type": "editor",
+      "key": "{#separator}│ {##C6A0F6}",
+      "format": "{name} v{version}"
+    },
+    {
+      "type": "terminalfont",
+      "key": "{#separator}│ {##C6A0F6}󰛖",
+      "format": "{name}"
+    },
+
+    {
+      "type": "custom",
+      "format": "{#separator}│"
+    },
+
+    // Window manager and display
+    {
+      "type": "wm",
+      "key": "{#separator}│ {#blue}󰧨",
+      "format": "{pretty-name} v{version}"
+    },
+    {
+      "type": "display",
+      "key": "{#separator}│ {#blue}󰹑",
+      "format": "{width}x{height} @ {refresh-rate} Hz"
+    },
+
+    {
+      "type": "custom",
+      "format": "{#separator}│"
+    },
+
+    // Trivia (uptime, installed-packages, colors)
+    {
+      "type": "uptime",
+      "key": "{#separator}│ {#blue}"
+    },
+    {
+      "type": "packages",
+      "key": "{#separator}│ {#blue}󰏖",
+      "format": "{pacman} installed"
+    },
+    {
+      "type": "colors",
+      "key": "{#separator}╰ {#blue}",
+      "symbol": "circle"
+    }
+  ]
+}
