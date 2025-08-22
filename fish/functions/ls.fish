@@ -1,3 +1,3 @@
-function ls --wraps=eza --wraps='eza --icons=auto' --description 'alias ls=eza --icons=auto'
-    eza --icons=auto $argv
+function ls --wraps=eza --wraps='eza --icons=auto --sort=type' --description 'alias ls=eza --icons=auto --sort=type'
+    eza --icons=auto --sort=type $argv
 end

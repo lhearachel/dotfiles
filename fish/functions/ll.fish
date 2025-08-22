@@ -1,4 +1,4 @@
-function ll --wraps='eza --icons=auto --long' --description 'alias ll=eza --icons=auto --long'
-  eza --icons=auto --long $argv
+function ll --wraps='eza --icons=auto --sort=type --long' --description 'alias ll=eza --icons=auto --sort=type --long'
+  eza --icons=auto --sort=type --long $argv
         
 end
