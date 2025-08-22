@@ -7,6 +7,10 @@ return {
       { "nvim-lua/plenary.nvim", lazy = true },
     },
 
+    opts = {
+      open_for_directories = true,
+    },
+
     keys = {
       {
         "<leader>e",
