@@ -16,6 +16,7 @@ sed -n "/### Summary/,\$p" <$choice \
     | sed "s/❌/:checkbox-unchecked:/g" \
     | sed "s/ℹ/:information-source:/g" \
     | sed "s/^>:/> :/g" \
+    | sed "s/\[\[/[​[/g" \
     | "$CLIP_COPY"
 
 cd $cwd
