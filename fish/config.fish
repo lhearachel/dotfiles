@@ -25,7 +25,7 @@ fish_add_path "$CARGO_ROOT/bin"
 
 set --local machine_config ~/.config/fish/config_(prompt_hostname).fish
 if test -e $machine_config
-    . $machine_config
+    source $machine_config
 else
     echo (set color bryellow)"⚠  No local config found for machine "(prompt_hostname)(set color normal)
 end
