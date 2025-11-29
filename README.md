@@ -74,15 +74,12 @@ beautiful.
 
 ## Linux-Specific
 
-### Wayland Compositor: `hyprland`
+### Wayland Compositor: `niri`
 
-I started using this when I spun up an Arch machine and haven't found a strong
-reason to switch to a different compositor. Some additional dotfiles for my
-specific desktop environment are included for:
+I'm trying out `niri` this year as a scrolling compositor.
+
+Some additional dotfiles for my specific desktop environment are included for:
 
 - `fontconfig` - Default system fonts
-- `mako` - Notification daemon
-- `rofi` - Application launcher
+- `noctalia` - My `quickshell` implementation
 - `wallpaper` - Just my wallpaper 😁
-- `waybar` - System panels
-- `wlogout` - Logout and shutdown menu
