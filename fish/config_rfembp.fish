@@ -39,3 +39,6 @@ if not contains $_asdf_shims $PATH
     set -gx --prepend PATH $_asdf_shims
 end
 set --erase _asdf_shims
+
+# Enable Homebrew's internal JSON API
+set -gx HOMEBREW_USE_INTERNAL_API 1
