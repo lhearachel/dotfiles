@@ -103,6 +103,7 @@ binds {
     Mod+Return hotkey-overlay-title="Open a Terminal" { spawn "kitty"; }
     Mod+Space  hotkey-overlay-title="Open a Launcher" { spawn-sh "qs -c noctalia-shell ipc call launcher toggle"; }
     Mod+W      hotkey-overlay-title="Open a Browser"  { spawn "firefox"; }
+    Mod+D      hotkey-overlay-title="Open Discord"    { spawn-sh "discord --enable-features=UseOzonePlatform --ozone-platform=wayland --enable-wayland-ime"; }
 
     Super+Shift+L hotkey-overlay-title="Lock the Screen" { spawn-sh "qs -c noctalia-shell ipc call lockScreen lock"; }
 
