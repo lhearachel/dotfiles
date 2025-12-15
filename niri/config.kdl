@@ -38,7 +38,7 @@ layout {
     always-center-single-column
     empty-workspace-above-first
 
-    default-column-display "tabbed"
+    default-column-display "normal"
     tab-indicator { hide-when-single-tab; }
 
     background-color "transparent"
@@ -208,6 +208,8 @@ binds {
     Mod+Comma  { consume-window-into-column; }
     // Expel the bottom window from the focused column to the right.
     Mod+Period { expel-window-from-column; }
+
+    Mod+T { toggle-column-tabbed-display; }
 
     Mod+R       { switch-preset-column-width; }
     Mod+Ctrl+R  { reset-window-height; }
