@@ -228,7 +228,7 @@
         "allowPanelsOnScreenWithoutBar": true,
         "animationDisabled": false,
         "animationSpeed": 1,
-        "avatarImage": "/home/rachel/.face",
+        "avatarImage": "/home/rachel/dotfiles/images/avatar.png",
         "boxRadiusRatio": 1,
         "compactLockScreen": false,
         "dimmerOpacity": 0.6,
@@ -416,7 +416,7 @@
         "tooltipsEnabled": true
     },
     "wallpaper": {
-        "directory": "/home/rachel/dotfiles/wallpaper",
+        "directory": "/home/rachel/dotfiles/images/wallpaper",
         "enableMultiMonitorDirectories": false,
         "enabled": true,
         "fillColor": "#000000",
