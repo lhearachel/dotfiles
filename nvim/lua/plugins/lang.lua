@@ -20,6 +20,7 @@ return {
         "kdl",
         "ledger",
         "linkerscript",
+        "meson",
         "ninja",
         "printf",
         "rasi", -- Config files for rofi
