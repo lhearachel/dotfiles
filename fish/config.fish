@@ -39,3 +39,5 @@ end
 function _space_prompts --on-event fish_postexec
     echo
 end
+
+fish_config theme choose catppuccin
