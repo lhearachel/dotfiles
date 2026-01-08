@@ -17,6 +17,6 @@ sed -n "/### Summary/,\$p" <$choice \
     | sed "s/ℹ/:information-source:/g" \
     | sed "s/^>:/> :/g" \
     | sed "s/\[\[/[​[/g" \
-    | "$CLIP_COPY"
+    | kcopy
 
 cd $cwd

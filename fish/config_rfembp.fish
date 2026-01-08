@@ -3,7 +3,6 @@ fish_add_path /opt/homebrew/bin
 fish_add_path /opt/homebrew/sbin
 fish_add_path /opt/homebrew/opt/bison/bin
 set -gx BROWSER "open -a firefox"
-set -gx CLIP_COPY pbcopy
 set -gx HOMEBREW_USE_INTERNAL_API 1
 
 # This Macbook maintains siloing of Git repositories by GitHub user.
