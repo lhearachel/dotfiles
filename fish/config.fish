@@ -8,8 +8,7 @@ set -gx VISUAL nvim
 set -gx EDITOR nvim
 set -gx HOSTNAME (uname -n)
 
-# Use nvim as the man-pager
-set -gx MANPAGER "nvim +Man!"
+set -gx MANPAGER "less -sR"
 
 set -gx DOTFILES "$HOME/dotfiles"
 set -gx PYENV_ROOT "$HOME/.pyenv"
