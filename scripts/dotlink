@@ -1,6 +1,8 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
-XDG_CONFIG_HOME="$HOME/.config"
+set -euo pipefail
+
+XDG_CONFIG_HOME="${XDG_CONFIG_HOME:-$HOME/.config}"
 
 function try_link {
 	if [ -L "$XDG_CONFIG_HOME/$1" ]; then
@@ -24,6 +26,9 @@ try_link git
 try_link fontconfig
 try_link mise
 try_link fastfetch
-try_link niri
-try_link noctalia
-try_link systemd
+
+if [[ "$(uname -s)" =~ Linux ]]; then
+    try_link niri
+    try_link noctalia
+    try_link systemd
+fi
