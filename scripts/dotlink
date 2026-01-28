@@ -29,6 +29,5 @@ try_link fastfetch
 
 if [[ "$(uname -s)" =~ Linux ]]; then
     try_link niri
-    try_link noctalia
     try_link systemd
 fi
