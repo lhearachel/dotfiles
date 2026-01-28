@@ -1,7 +1,7 @@
 [user]
     name = Rachel
     email = rachel@lhea.me
-	signingkey = A9C066B746331A116632CC52D3C2634E9FEF9305
+    signingkey = A9C066B746331A116632CC52D3C2634E9FEF9305
 
 [init]
     defaultBranch = main
@@ -27,3 +27,6 @@
 
 [diff]
     colorMoved = default
+
+[includeIf "gitdir:~/code/work/**/.git"]
+    path = config-work
