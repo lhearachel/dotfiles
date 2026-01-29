@@ -3,8 +3,7 @@
 set --local year (date +%Y)
 set --local cwd (pwd)
 
-z dex
-cd "journal/$year"
+cd "$DEX/journal/$year"
 
 set --local choice (find . -type f | sort -r | fzf)
 sed -n "/### Summary/,\$p" <$choice \
