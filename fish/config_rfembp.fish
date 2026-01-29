@@ -5,10 +5,8 @@ fish_add_path /opt/homebrew/opt/bison/bin
 set -gx BROWSER "open -a firefox"
 set -gx HOMEBREW_USE_INTERNAL_API 1
 
-# This Macbook maintains siloing of Git repositories by GitHub user.
-# TODO: I want to change this in the future.
-set -gx GIT_REPOS "$CODE_REPOS/github.com"
-set -gx MY_GIT_REPOS "$CODE_REPOS/github.com"
+set -gx GIT_REPOS "$CODE_REPOS"
+set -gx MY_GIT_REPOS "$CODE_REPOS/personal"
 set -gx DEX "$MY_GIT_REPOS/dex"
 
 # My upstream username is different from my local user.
