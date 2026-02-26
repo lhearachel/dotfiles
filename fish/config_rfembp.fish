@@ -4,6 +4,7 @@ fish_add_path /opt/homebrew/sbin
 fish_add_path /opt/homebrew/opt/bison/bin
 set -gx BROWSER "open -a firefox"
 set -gx HOMEBREW_USE_INTERNAL_API 1
+set -gx HOMEBREW_NO_ENV_HINTS 1
 
 set -gx GIT_REPOS "$CODE_REPOS"
 set -gx MY_GIT_REPOS "$CODE_REPOS/personal"
