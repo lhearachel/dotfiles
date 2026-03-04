@@ -8,13 +8,13 @@ cd "$DEX/journal/$year"
 set --local choice (find . -type f | sort -r | fzf)
 sed -n "/### Summary/,\$p" <$choice \
     | tail -n +5 \
-    | sed "s/^/>/g" \
-    | sed "s/➡️/:arrow:/g" \
-    | sed "s/✅/:checkbox-checked:/g" \
-    | sed "s/🚧/:checkbox-deferred:/g" \
-    | sed "s/❌/:checkbox-unchecked:/g" \
-    | sed "s/ℹ/:information-source:/g" \
-    | sed "s/^>:/> :/g" \
+    | sed "s/➡️/-/g" \
+    | sed "s/🎥/:zoom:/g" \
+    | sed "s/⏳/:waiting:/g" \
+    | sed "s/⌨️/:afk:/g" \
+    | sed "s/🪾/:pr-open:/g" \
+    | sed "s/🌳/:pr-merged:/g" \
+    | sed "s/🚧/:workingonit:/g" \
     | sed "s/\[\[/[​[/g" \
     | kcopy
 
