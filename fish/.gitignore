@@ -36,3 +36,6 @@ completions/mise.fish
 
 # git-extras
 completions/git-extras.fish
+
+# meetupinvite2000
+completions/meetupinvite2000.fish
