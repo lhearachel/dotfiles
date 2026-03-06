@@ -246,3 +246,5 @@ binds {
     Mod+Shift+Escape { quit; }
     Ctrl+Alt+Delete  { quit; }
 }
+
+spawn-at-startup "qs" "-c" "noctalia-shell" "--no-duplicate"
