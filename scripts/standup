@@ -14,6 +14,7 @@ sed -n "/### Summary/,\$p" <$choice \
     | sed "s/⌨️/:afk:/g" \
     | sed "s/🪾/:pr-open:/g" \
     | sed "s/🌳/:pr-merged:/g" \
+    | sed "s/❗️/:github-issue:/g" \
     | sed "s/🚧/:workingonit:/g" \
     | sed "s/\[\[/[​[/g" \
     | kcopy
