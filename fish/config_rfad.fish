@@ -6,4 +6,4 @@ set -gx LEDGER_FILE ~/finance/journals/2025/2025.journal
 
 set -gx MOZ_ENABLE_WAYLAND 1
 
-fish_add_path "$XDG_DATA_HOME/gem/ruby/3.3.0/bin"
+mise activate --shims fish | source
